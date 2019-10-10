@@ -1,0 +1,21 @@
+#container
+    {
+    width: 1000px;
+    margin: auto;
+    }
+
+header
+{
+    background-color: blue;
+    color: pink;
+    text-align: center;
+    text-decoration: none;
+}
+
+li
+{
+    list-style-type: none;
+    margin: 20px;
+    padding: 10px;
+    display: inline;
+}
