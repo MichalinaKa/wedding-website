@@ -34,7 +34,7 @@ section {
 }
 
 .item {
-    width: 100vh;
+    width: 100%;
     display: block;
     padding: 50px;
     margin: 20px;
@@ -89,7 +89,7 @@ h2 {
 
 #banner,
 #ceremony {
-    background-image: url(white1.jpg);
+    background-image: url(img/white1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -178,7 +178,6 @@ li {
     width: 2px;
     height: 400px;
     display: block;
-
 }
 
 .icon {
