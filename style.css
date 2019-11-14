@@ -1,21 +1,188 @@
-#container
-    {
-    width: 1000px;
-    margin: auto;
-    }
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Josefin Sans', sans-serif; */
 
-header
-{
-    background-color: blue;
-    color: pink;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.nav {
+    height: 100vh;
+}
+
+header {
+    position: relative;
+    color: black;
     text-align: center;
     text-decoration: none;
 }
 
-li
-{
+section {
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    max-width: 1240PX;
+    margin: 100px auto;
+}
+
+.item {
+    width: 100vh;
+    display: block;
+    padding: 50px;
+    margin: 20px;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul,
+h1,
+h2,
+footer {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+}
+
+h1,
+h2 {
+    align-items: center;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 2em;
+    padding-top: 40px;
+}
+
+h1:after {
+    content: "";
+    background-color: rgb(228, 204, 70);
+    width: 100px;
+    height: 2px;
+    display: block;
+    margin: 0.2em auto 1em;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 3em;
+}
+
+#banner,
+#ceremony {
+    background-image: url(white1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    /* opacity: 0.5; */
+}
+
+#banner {
+    opacity: 0.9;
+    height: 80vh;
+}
+
+#ceremony {
+    height: 100vh;
+}
+
+iframe {
+    height: 30vh;
+    width: 100%;
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    font-weight: 100;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.title {
+    font-size: 40px;
+    padding-top: 40px;
+}
+
+.date {
+    font-size: 20px;
+    padding-bottom: 1em;
+    color: lightslategray;
+}
+
+p.title::before {
+    content: "";
+    background-color: rgb(228, 204, 70);
+    width: 200px;
+    height: 1px;
+    display: block;
+    margin: 0.5em auto 0.5em;
+}
+
+p.title::after {
+    content: "";
+    background-color: rgb(228, 204, 70);
+    width: 200px;
+    height: 1px;
+    display: block;
+    margin: 0.5em auto 0.5em;
+}
+
+ul {
+    padding: 40px;
+}
+
+li:hover {
+    border-bottom: 1px solid rgb(228, 204, 70);
+    font-weight: 400;
+}
+
+li {
     list-style-type: none;
     margin: 20px;
     padding: 10px;
     display: inline;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.mainimg {
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+}
+
+.mainimg:after {
+    content: "";
+    background-color: black;
+    width: 2px;
+    height: 400px;
+    display: block;
+
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 30px;
 }
