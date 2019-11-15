@@ -107,6 +107,8 @@ h2 {
     background-attachment: fixed;
 }
 
+
+
 #gallery {
     background-color: rgb(228, 204, 70);
 }
@@ -185,6 +187,7 @@ ul {
 li:hover {
     border-bottom: 1px solid rgb(228, 204, 70);
     font-weight: 400;
+
 }
 
 li {
