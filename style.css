@@ -1,159 +1,92 @@
 /*font-family: 'Montserrat', sans-serif;
-font-family: 'Josefin Sans', sans-serif; */
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'tomato';
+*/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;
+    scroll-behavior: smooth;
+    font-family: 'tomato';
+
 }
 
-header {
-    position: relative;
-    color: black;
+/* zmienne kolory */
+:root {
+    --lightyellow: rgba(247, 225, 100, 0.5);
+    --darkyellow: rgba(228, 204, 70, 1);
+    --fontdark: rgba(0, 0, 0, 1);
+    --fontlight: rgba(252, 252, 252, 1);
+}
 
-    text-decoration: none;
+@font-face {
+    font-family: 'tomato';
+    src: url("css/tomatoes-font/Tomatoes-O8L8.ttf");
+}
+
+@font-face {
+    font-family: 'elegant';
+    src: url("css/Metropolis1920-Regular.ttf");
+}
+
+/* główne ustawienia, szerokość strony, flexbox itp */
+
+
+.container,
+.container-nav,
+section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.container,
+.container-nav {
+    max-width: 1240px;
 }
 
 section {
-    width: 100%;
+    max-width: auto;
+    /* min-height: 80vh; */
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
-ul,
-h1,
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    text-transform: uppercase;
-    font-weight: 100;
-    text-align: center;
-}
-
-h1,
-h2 {
-    align-items: center;
-}
-
-p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100
-}
-
-h1 {
-    font-size: 50px;
-    line-height: 2em;
-    padding-top: 40px;
-}
-
-
-#banner {
-    background-image: url(img2/person.jpg);
+header {
+    background-image: url(img/MM.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#banner {
-    opacity: 0.9;
-    height: 80vh;
-    background-attachment: fixed;
-}
-
-#ceremony {
     height: 100vh;
-    /* opacity: 0.7; */
-    background-image: url(img/beautiful2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     background-attachment: fixed;
-}
-
-
-
-#gallery {
-    background-color: rgb(228, 204, 70);
-}
-
-#gallery h1:after {
-    background-color: white;
-}
-
-.nav {
-    height: 100vh;
-}
-
-.container {
     display: flex;
-    justify-content: space-around;
+    /* tutaj jest top w menu dlatego jest na białym tle */
+}
+
+
+/* tytuł storny i data */
+.container-nav {
+    transform: rotate(315deg);
+    /* border-radius: 50%; */
+    margin: 300px 50px;
     text-align: center;
+    width: 1200px;
+    height: 50px;
+    /* border: 1.5px solid rgb(3, 56, 87); */
+    background-color: rgba(255, 255, 255, 0.6);
+
+}
+
+.title,
+.date {
     width: 100%;
-    max-width: 1240PX;
-    margin: 50px auto;
-}
-
-.item {
-    width: 100%;
-    display: block;
-    padding: 50px;
-    margin: 20px;
-}
-
-
-
-
-h1:after {
-    content: "";
-    background-color: rgb(228, 204, 70);
-    width: 100px;
-    height: 2px;
-    display: block;
-    margin: 0.2em auto 1em;
-}
-
-h2 {
-    font-size: 30px;
-    line-height: 3em;
-}
-
-footer {
-    background-color: rgb(228, 204, 70);
-    height: 10vh;
-    font-family: 'Josefin Sans', sans-serif;
-    position: relative;
-}
-
-
-.icon2 {
-    width: 15px;
-    height: 15px;
-}
-
-.foot {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 20px;
-}
-
-iframe {
-    width: 100%;
-    height: 40%;
-}
-
-.nav {
-    width: 100%;
-    height: 100%;
-    font-weight: 100;
-    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
 }
 
 .title {
-    font-size: 40px;
-    padding-top: 40px;
+    font-family: 'elegant';
+    font-size: 80px;
+    color: rgb(3, 56, 87);
+    text-align: center;
+    margin: auto;
 }
 
 .date {
@@ -162,9 +95,11 @@ iframe {
     color: lightslategray;
 }
 
-p.title::before {
+
+
+/* p.title::before {
     content: "";
-    background-color: rgb(228, 204, 70);
+    background-color: var(--darkyellow);
     width: 200px;
     height: 1px;
     display: block;
@@ -173,20 +108,34 @@ p.title::before {
 
 p.title::after {
     content: "";
-    background-color: rgb(228, 204, 70);
+    background-color: var(--darkyellow);
     width: 200px;
     height: 1px;
     display: block;
     margin: 0.5em auto 0.5em;
+} */
+
+
+/* menu */
+#nav {
+    /* background-color: rgba(255, 255, 255, 0.6); */
+    /* overflow: hidden; */
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* margin: auto; */
+}
+
+.container_nav {
+    flex-direction: column;
+    height: 100vh;
 }
 
 ul {
     padding: 40px;
-}
-
-li:hover {
-    border-bottom: 1px solid rgb(228, 204, 70);
-    font-weight: 400;
+    position: relative;
+    text-align: end;
 
 }
 
@@ -195,29 +144,249 @@ li {
     margin: 20px;
     padding: 10px;
     display: inline;
+    text-align: end;
     font-family: 'Montserrat', sans-serif;
+    font-family: 'tomato';
     font-size: 16px;
-    text-transform: uppercase;
+    font-weight: 300;
+    /* text-transform: uppercase; */
 }
 
-.mainimg {
+
+#home {
+    width: 50px;
+    height: 50px;
+}
+
+#home img {
+    width: 15px;
+    height: 15px;
+}
+
+li:hover {
+    border-top: 1px solid var(--darkyellow);
+}
+
+a {
+    text-decoration: none;
+    color: var(--fontdark);
+
+}
+
+
+/* nagłówki style  */
+h1,
+h2,
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100
+}
+
+h1,
+h2 {
+    /* font-family: 'elegant'; */
+    text-align: center;
+    ;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 2em;
+    padding-top: 80px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 3em;
+}
+
+/* sekcja hello */
+.container__box img {
+    width: 300px;
+    height: 400px;
+    padding-left: 50px;
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container__box h2 {
+    font-family: 'tomato';
+    font-size: 3em;
+    padding-top: 30px;
+}
+
+.container__box p {
+    font-size: 25px;
+    padding: 40px;
+    text-align: center;
+}
+
+.welcome {
+    width: 60%;
+    border: 1.5px solid black;
+    margin: 70px;
+}
+
+/* sekcja hero */
+
+#hero {
+    background-color: rgb(231, 231, 158);
+    background-image: url(img/quote.jpg);
+}
+
+.hero {
+    justify-content: flex-end;
+}
+
+.hero p {
+    margin: 30px;
+    line-height: 1.5;
+    padding: 30px;
+    font-size: 20px;
+    text-align: end;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.hero h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin-right: 30px;
+}
+
+/* sekcja o nas - ustawienia */
+
+.about-item {
+    width: 50%;
+}
+
+
+
+/* sekcja kontakt - ustawienia */
+
+#contact {
+    /* background-color: var(--lightyellow); */
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    text-align: center;
+    padding: 50px;
+}
+
+.item h2 {
+    width: 100%;
+    font-size: 2em;
+}
+
+.item p {
+    width: 100%;
+    font-size: 3em;
+
+}
+
+.item img {
+    padding-top: 50px;
+    width: 60%;
+    clip-path: circle(50%);
+    margin: 0 auto;
+}
+
+/* #ceremony, */
+#gallery {
+    background-color: var(--lightyellow);
+    color: rgba(0, 0, 0, 1);
+    /* background-image: url(img/beautiful2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+
+}
+
+
+/* ustawienia zdjęć i ikon */
+img {
+    display: inline-block;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 30px;
+}
+
+/* ustawienia stopki  */
+footer {
+    background-color: var(--darkyellow);
+    height: 10vh;
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+}
+
+.foot {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.icon2 {
+    width: 15px;
+    height: 15px;
+}
+
+h1:after {
+    content: "";
+    background-color: var(--darkyellow);
+    width: 100px;
+    height: 2px;
+    display: block;
+    margin: 0.2em auto 1em;
+}
+
+
+
+/* 
+#gallery {
+    background-color: rgb(228, 204, 70);
+} */
+
+/* #gallery h1:after {
+    background-color: white;
+} */
+
+
+
+
+
+
+/* iframe {
+    width: 100%;
+    height: 40%;
+} */
+
+
+/* }
+
+
+.about-img {
     opacity: 0.9;
     width: 100%;
     height: 100%;
 }
 
-.mainimg:after {
+.about-img:after {
     content: "";
     background-color: black;
     width: 2px;
     height: 400px;
     display: block;
-}
-
-.icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 30px;
 }
 
 
@@ -232,6 +401,24 @@ p.nr {
     font-size: 30px;
 }
 
-h2.name {
-    text-transform: initial;
+*/
+/* sekcja ceremonia */
+
+#ceremony {
+    background-image: url(img/beautiful2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
 }
+
+/* 
+body {
+    scroll-snap-type: x mandatory;
+}
+
+section {
+
+    width: 100vw;
+    scroll-snap-align: start;
+} */
