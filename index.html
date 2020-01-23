@@ -13,35 +13,32 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Michalina & Marco 1.08.2020</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
+    <div class="container--nav" id="nav">
+        <ul>
+            <li id="home"><a href="index.html#hello"><img src="img/heart.png"></a></li>
+            <li><a href="#about">o nas</a></li>
+            <li><a href="#ceremony">ceremonia</a></li>
+            <li><a href="#guide">przewodnik</a></li>
+            <li><a href="#gallery">galeria</a></li>
+            <li><a href="#contact">kontakt</a></li>
+        </ul>
+    </div>
+    <div class="container--nav">
+        <h1>Michalina &hearts; Marco</h1>
+    </div>
     <header id="main">
-        <div class="container-nav">
-            <!-- <p class="title">Michalina <br>
-                &#10084;<br> Marco
-            </p> -->
-            <!-- <p class="date">1.08.2020</p> -->
-        </div>
-        <div id="nav">
-            <ul>
-                <li id="home"><a href="index.html#main"><img src="img/heart.png"></a></li>
-                <li><a href="#about">o nas</a></li>
-                <li><a href="#ceremony">ceremonia</a></li>
-                <li><a href="#guide">przewodnik</a></li>
-                <li><a href="#gallery">galeria</a></li>
-                <li><a href="#contact">kontakt</a></li>
-            </ul>
-        </div>
 
     </header>
 
     <main>
         <section id="hello">
-
             <div class="container hello">
-
-                <div class="container__box welcome">
+                <div class="container--hello welcome">
                     <div class="container__box">
                         <h2>Szanowni Goście</h2>
                         <p>
@@ -51,7 +48,7 @@
                         <p>Michalina & Marco</p>
                     </div>
                 </div>
-                <div class="container__box">
+                <div class="container--hello">
                     <img src="img/plant.png">
                 </div>
             </div>
@@ -75,90 +72,85 @@
         </section>
 
         <section id="about">
-            <div class="container">
-                <h1>o nas</h1>
-                <div class="about-item">
-                    <h2>Michalina</h2>
+            <div class="container--nr">
+                <h1>01</h1>
+                <h3>o nas</h3>
+            </div>
+            <div class="container--img">
+                <img src="img/wee.jpg" alt="our photo, love, couple">
+            </div>
+
+            <!-- <div class="container">
+                <div class="container__we about--content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, perspiciatis saepe
+                        facere dolores quaerat corrupti laboriosam repellendus aperiam, nisi aut quis expedita ullam
+                        cupiditate magnam ratione, nemo alias nihil.</p>
+                </div>
+                <div class="container__img container__we about--her">
+                    <h3>jak sie poznaliśmy?</h3>
+                    <img src="img/hand.png">
+
 
                 </div>
-                <div class=" about-item">
-                    <h2>Marco</h2>
+                <div class="container__we about--him">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus illo expedita impedit! Corporis
+                        debitis provident ea odio amet recusandae expedita quidem a, maiores quis laboriosam tenetur,
+                        neque magni sint? Cumque?</p>
                 </div>
-                <div class="about-item item1"><img class="about-img" src="img/my.jpg" alt="our photo, love, couple">
-                </div>
-                <div class="about-item item2">
-                    <h2>Jak się poznaliśmy</h2>
-                    <img class="icon" src="ikony/like.png">
-                    <p>Historia naszej znajomości
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium dolore excepturi provident
-                        veniam
-                        quisquam reiciendis error dolorem exercitationem atque, iure tenetur facere deserunt ex
-                        veritatis<br>
-                        aspernatur at molestias commodi culpa ducimus. Omnis molestiae placeat, voluptates dignissimos
-                        nulla
-                        ex?
-                        Velit, sit.
-                    </p>
-                    <!-- <img class="icon" src="ikony/like.png"> -->
-                </div>
-            </div>
+
+            </div> -->
         </section>
 
 
         <section id="ceremony">
-            <h1>ceremonia</h1>
-            <div class="container">
-                <div class="ceremony-item item3">
-                    <h2>
-                        data
-                    </h2>
-                    <img class="icon" src="ikony/date.png">
-                    <p>1 sierpnia 2020</p>
-                </div>
-                <div class="ceremony-item item4">
-                    <h2>godzina</h2>
-                    <img class="icon" src="ikony/hour.png">
-                    <p>godz. 18:00</p>
-                </div>
-                <div class="ceremony-item item5">
-                    <h2>miejsce</h2>
-                    <img class="icon" src="ikony/place.png">
-                    <p>„Villa Tamerici” <br>Via Torre Foro (contrada
-                        Postilli),<br>
-                        66026 Ortona (CH)
-                        <br></p>
-                </div>
+            <div class="container--img">
+                <img src="img3/place.jpg"></div>
+            <div class="container--nr">
+                <h1>02</h1>
+                <h3>ceremonia</h3>
             </div>
-            </div>
-            </div>
+
+
         </section>
 
         <section id="guide">
-            <h1>przewodnik</h1>
-            <div class="container">
-                <div class="guide-item">podróż</div>
-                <div class="guide-item">noclegi</div>
-                <div class="guide-item">gdzie zjeść?</div>
-                <div class="guide-item">co warto zobaczyć?</div>
+            <div class="container--nr">
+                <h1>03</h1>
+                <h3>przewodnik</h3>
             </div>
+            <div class="container--img">
+                <img src="img3/moto.jpg"></div>
+            <div class="container">
 
+
+            </div>
+            <!-- <h1>02 przewodnik</h1>
+            <div class="guide-item">podróż</div>
+            <div class="guide-item">noclegi</div>
+            <div class="guide-item">gdzie zjeść?</div>
+            <div class="guide-item">co warto zobaczyć?</div> -->
         </section>
         <section id="gallery">
-            <h1>galeria</h1>
-            <p>Nasze podróże</p>
-            <div class="container">
-                <div>
-
-                </div>
+            <div class="container--img">
+                <img src="img2/bride-and-groom.jpg"></div>
+            <div class="container--nr">
+                <h1>04</h1>
+                <h3>galeria</h3>
             </div>
-
-
+            <div class="container">
+                <div></div>
+                <div></div>
+            </div>
         </section>
         <section id="contact">
+            <div class="container--nr">
+                <h1>05</h1>
+                <h3>kontakt</h3>
+            </div>
+            <div class="container--img">
+                <img src="img/contact.jpg"></div>
 
-            <h1>kontakt</h1>
-            <!-- <h2>zapraszamy do kontaktu</h2> -->
-            <div class="container">
+            <!-- <div class="container">
                 <div class="item">
                     <h2 class="name">Michalina</h2>
                     <p class="nr"> +48 509 353 795</p>
@@ -169,13 +161,14 @@
                     <p class="nr">+39 393 7456816</p>
                     <img class="we" src="img/he1.jpg">
                 </div>
-            </div>
+            </div> -->
 
 
         </section>
     </main>
+    <span class="scrollTopButton"><a href="index.html#nav"></a></span>
     <footer>
-        <div class="foot">&copy; made with <img class="icon2" src="ikony/like.png"> 2019 </div>
+        <div class="foot">&copy; made with &hearts; by MichalinaKa </div>
 
 </body>
 

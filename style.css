@@ -1,6 +1,7 @@
 /*font-family: 'Montserrat', sans-serif;
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'tomato';
+font-family: 'elegant';
 */
 
 * {
@@ -27,131 +28,63 @@ font-family: 'tomato';
 
 @font-face {
     font-family: 'elegant';
-    src: url("css/Metropolis1920-Regular.ttf");
+    src: url("css/Znikomitsc-82P0.otf");
+
 }
 
 /* główne ustawienia, szerokość strony, flexbox itp */
-
-
 .container,
-.container-nav,
+.container--nav,
 section {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    align-self: flex-start;
 }
 
 .container,
-.container-nav {
+.container--nav {
     max-width: 1240px;
 }
 
 section {
     max-width: auto;
-    /* min-height: 80vh; */
 }
 
 header {
-    background-image: url(img/MM.jpg);
+    border: 90px solid white;
+    border-top: 0;
+    background-image: url(img/wave.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
     background-attachment: fixed;
     display: flex;
-    /* tutaj jest top w menu dlatego jest na białym tle */
 }
 
-
-/* tytuł storny i data */
-.container-nav {
-    transform: rotate(315deg);
-    /* border-radius: 50%; */
-    margin: 300px 50px;
-    text-align: center;
-    width: 1200px;
-    height: 50px;
-    /* border: 1.5px solid rgb(3, 56, 87); */
-    background-color: rgba(255, 255, 255, 0.6);
-
-}
-
-.title,
-.date {
-    width: 100%;
-    font-weight: 200;
-}
-
-.title {
-    font-family: 'elegant';
-    font-size: 80px;
-    color: rgb(3, 56, 87);
-    text-align: center;
-    margin: auto;
-}
-
-.date {
-    font-size: 20px;
-    padding-bottom: 1em;
-    color: lightslategray;
-}
-
-
-
-/* p.title::before {
-    content: "";
-    background-color: var(--darkyellow);
-    width: 200px;
-    height: 1px;
-    display: block;
-    margin: 0.5em auto 0.5em;
-}
-
-p.title::after {
-    content: "";
-    background-color: var(--darkyellow);
-    width: 200px;
-    height: 1px;
-    display: block;
-    margin: 0.5em auto 0.5em;
-} */
-
-
-/* menu */
-#nav {
-    /* background-color: rgba(255, 255, 255, 0.6); */
-    /* overflow: hidden; */
-    text-align: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    /* margin: auto; */
-}
-
-.container_nav {
-    flex-direction: column;
-    height: 100vh;
-}
-
-ul {
-    padding: 40px;
-    position: relative;
-    text-align: end;
-
-}
-
-li {
-    list-style-type: none;
-    margin: 20px;
-    padding: 10px;
-    display: inline;
-    text-align: end;
+/* nagłówki style  */
+h2,
+p {
+    font-weight: 100;
     font-family: 'Montserrat', sans-serif;
-    font-family: 'tomato';
-    font-size: 16px;
-    font-weight: 300;
-    /* text-transform: uppercase; */
 }
 
+/* tytuł strony i menu */
+.container--nav {
+    text-align: center;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.container--nav h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    font-weight: 100;
+    padding: 20px;
+
+}
 
 #home {
     width: 50px;
@@ -163,46 +96,83 @@ li {
     height: 15px;
 }
 
-li:hover {
-    border-top: 1px solid var(--darkyellow);
+ul {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+li {
+    list-style-type: none;
+    margin: 20px;
+    padding: 10px;
+    display: inline;
+    font-family: 'tomato';
+    font-size: 16px;
+    font-weight: 300;
 }
 
 a {
     text-decoration: none;
     color: var(--fontdark);
+}
+
+a:hover {
+    color: var(--darkyellow);
+    font-weight: 600;
 
 }
 
-
-/* nagłówki style  */
-h1,
-h2,
-p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100
-}
-
-h1,
-h2 {
-    /* font-family: 'elegant'; */
+/* wspólne ustawienia numeracji i zdjęć głównych sekcji */
+.container--nr,
+.container--img {
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
     text-align: center;
-    ;
 }
 
-h1 {
+.container--nr h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 50px;
+    font-weight: 100;
+    line-height: 1em;
     line-height: 2em;
     padding-top: 80px;
-    width: 100%;
+    margin: 100px 0;
+    width: 40%;
+    border-right: 1.5px solid black;
 }
 
-h2 {
+.container--nr h1::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--darkyellow);
+    display: block;
+    margin: 20px auto;
+}
+
+.container--nr h3 {
+    font-weight: 100;
+    width: 40%;
+    margin: auto;
     font-size: 30px;
     line-height: 3em;
 }
 
-/* sekcja hello */
-.container__box img {
+.container--img img {
+    width: 100%;
+    object-fit: cover;
+    margin-top: 50px;
+}
+
+
+/* sekcja hello - przywitanie gości */
+
+.container--hello img {
     width: 300px;
     height: 400px;
     padding-left: 50px;
@@ -211,13 +181,22 @@ h2 {
     text-align: center;
 }
 
-.container__box h2 {
+.container--hello h2 {
     font-family: 'tomato';
     font-size: 3em;
     padding-top: 30px;
 }
 
-.container__box p {
+.hello {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.hello h2 {
+    text-align: center;
+}
+
+.container--hello p {
     font-size: 25px;
     padding: 40px;
     text-align: center;
@@ -227,6 +206,7 @@ h2 {
     width: 60%;
     border: 1.5px solid black;
     margin: 70px;
+
 }
 
 /* sekcja hero */
@@ -240,83 +220,63 @@ h2 {
     justify-content: flex-end;
 }
 
-.hero p {
+.hero p,
+.container__we p {
     margin: 30px;
     line-height: 1.5;
     padding: 30px;
-    font-size: 20px;
+    font-size: 18px;
     text-align: end;
     background-color: rgba(255, 255, 255, 0.4);
 }
 
+
 .hero h3 {
+    font-size: 15px;
     font-family: 'Josefin Sans', sans-serif;
-    text-align: center;
-    padding: 20px;
+    text-align: end;
+    padding-bottom: 20px;
     margin-right: 30px;
+    width: 100%;
 }
+
+
+
 
 /* sekcja o nas - ustawienia */
 
-.about-item {
-    width: 50%;
-}
 
 
 
-/* sekcja kontakt - ustawienia */
 
-#contact {
-    /* background-color: var(--lightyellow); */
-}
+/* js strzałka w góre przy skrolu */
 
-.item {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    text-align: center;
-    padding: 50px;
-}
-
-.item h2 {
-    width: 100%;
-    font-size: 2em;
-}
-
-.item p {
-    width: 100%;
-    font-size: 3em;
+.scrollTopButton {
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: 99999999;
+    background-image: url(ikony/right.png);
+    right: 50px;
+    bottom: 30px;
+    transition: all 0.5s ease-in-out;
 
 }
 
-.item img {
-    padding-top: 50px;
-    width: 60%;
-    clip-path: circle(50%);
-    margin: 0 auto;
-}
-
-/* #ceremony, */
-#gallery {
-    background-color: var(--lightyellow);
-    color: rgba(0, 0, 0, 1);
-    /* background-image: url(img/beautiful2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; */
+.scrollTopButton.show {
+    visibility: visible;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
 
 }
 
+.scrollTopButton.show a {
+    width: 100px;
+    height: 100px;
+    display: block;
 
-/* ustawienia zdjęć i ikon */
-img {
-    display: inline-block;
-}
-
-.icon {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 30px;
 }
 
 /* ustawienia stopki  */
@@ -336,89 +296,16 @@ footer {
     transform: translate(-50%, -50%)
 }
 
-.icon2 {
-    width: 15px;
-    height: 15px;
-}
 
-h1:after {
-    content: "";
-    background-color: var(--darkyellow);
-    width: 100px;
-    height: 2px;
-    display: block;
-    margin: 0.2em auto 1em;
-}
+/* menu */
 
+/* @keyframes nav_bcg {
+    from {
+        background-color: rgba(255, 255, 255, 0);
+    }
 
+    to {
+        background-color: rgba(255, 255, 255, 0.6);
 
-/* 
-#gallery {
-    background-color: rgb(228, 204, 70);
-} */
-
-/* #gallery h1:after {
-    background-color: white;
-} */
-
-
-
-
-
-
-/* iframe {
-    width: 100%;
-    height: 40%;
-} */
-
-
-/* }
-
-
-.about-img {
-    opacity: 0.9;
-    width: 100%;
-    height: 100%;
-}
-
-.about-img:after {
-    content: "";
-    background-color: black;
-    width: 2px;
-    height: 400px;
-    display: block;
-}
-
-
-.we {
-    width: 50vh;
-    margin: 30px;
-}
-
-p.nr {
-    padding: 20px;
-    color: gray;
-    font-size: 30px;
-}
-
-*/
-/* sekcja ceremonia */
-
-#ceremony {
-    background-image: url(img/beautiful2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-
-}
-
-/* 
-body {
-    scroll-snap-type: x mandatory;
-}
-
-section {
-
-    width: 100vw;
-    scroll-snap-align: start;
+    }
 } */
