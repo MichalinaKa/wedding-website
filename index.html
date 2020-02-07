@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pl">
 
 <head>
@@ -18,9 +19,55 @@
     <title>Michalina & Marco 1.08.2020</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        var current = "On-line"
+        var montharray = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+        var zostalo = document.getElementById("zostalo");
+
+        function countdown(yr, m, d) {
+            theyear = yr;
+            themonth = m;
+            theday = d
+            var today = new Date()
+            var todayy = today.getYear()
+            if (todayy < 1000) todayy += 1900
+            var todaym = today.getMonth()
+            var todayd = today.getDate()
+            var todayh = today.getHours()
+            var todaymin = today.getMinutes()
+            var todaysec = today.getSeconds()
+            var todaystring = montharray[todaym] + " " + todayd + ", " + todayy + " " + todayh + ":" + todaymin + ":" +
+                todaysec
+            futurestring = montharray[m - 1] + " " + d + ", " + yr
+            dd = Date.parse(futurestring) - Date.parse(todaystring)
+            dday = Math.floor(dd / (60 * 60 * 1000 * 24) * 1)
+            dhour = Math.floor((dd % (60 * 60 * 1000 * 24)) / (60 * 60 * 1000) * 1)
+            dmin = Math.floor(((dd % (60 * 60 * 1000 * 24)) % (60 * 60 * 1000)) / (60 * 1000) * 1)
+            dsec = Math.floor((((dd % (60 * 60 * 1000 * 24)) % (60 * 60 * 1000)) % (60 * 1000)) / 1000 * 1)
+            if (dday <= 0 && dhour <= 0 && dmin <= 0) {
+                zostalo.innerHTML = current
+                return
+            } else if (dday <= 0 && dhour <= 0) {
+                zostalo.innerHTML = dmin + " minut, i " + dsec + " sekund"
+                setTimeout("countdown(theyear,themonth,theday)", 1000)
+            } else if (dday <= 0) {
+                zostalo.innerHTML = dhour + " godzin, " + dmin + " minut, i " + dsec + " sekund"
+                setTimeout("countdown(theyear,themonth,theday)", 1000)
+            } else {
+                zostalo.innerHTML = dday + " Dni, " + dhour + " godzin, " + dmin + " minut, i " + dsec + " sekund"
+                setTimeout("countdown(theyear,themonth,theday)", 1000)
+            }
+        }
+        //Odpalamy date z parametrami rok/miesiąc/dzień
+        countdown(2020, 10, 09)
+    </script>
+
 </head>
 
 <body>
+    <?php include("contact.php");
+
+    ?>
     <div class="container--nav" id="nav">
         <ul>
             <li id="home"><a href="index.html#hello"><img src="img/heart.png"></a></li>
@@ -60,7 +107,16 @@
         </section>
 
         <section id="counter">
-            <div class="container container__counter"></div>
+            <h1>do naszego ślubu zostało:</h1>
+
+            <div class="container">
+                <div id="timer" class="container__counter container__counter--nr ">
+                    <div id="days" class="container__counter--nr "></div>
+                    <div id="hours" class="container__counter--nr "></div>
+                    <div id="minutes" class="container__counter--nr "></div>
+                    <div id="seconds" class="container__counter--nr "></div>
+                </div>
+            </div>
         </section>
         <!-- <section id="hero">
             <div class="container hero">
@@ -95,28 +151,8 @@
                     <h2></h2>
                 </div>
             </div>
-            <!-- <div class="container">
-                <div class="container__we about--content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, perspiciatis saepe
-                        facere dolores quaerat corrupti laboriosam repellendus aperiam, nisi aut quis expedita ullam
-                        cupiditate magnam ratione, nemo alias nihil.</p>
-                </div>
-                <div class="container__img container__we about--her">
-                    <h3>jak sie poznaliśmy?</h3>
-                    <img src="img/hand.png">
 
-
-                </div>
-                <div class="container__we about--him">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus illo expedita impedit! Corporis
-                        debitis provident ea odio amet recusandae expedita quidem a, maiores quis laboriosam tenetur,
-                        neque magni sint? Cumque?</p>
-                </div>
-
-            </div> -->
         </section>
-        <!-- <img class="plant" src="svg/Duzylisc2.svg"> -->
-
 
         <section id="ceremony">
             <div class="container--img">
@@ -265,7 +301,8 @@
                 </div>
                 <div class="contact__form--right">
                     <h1>Formularz kontaktowy</h1>
-                    <form>
+                    <p><?php echo $message ?></p>
+                    <form action="contact.php" method="POST">
                         <div class="box">
                             <label>
                                 <span>Imię i nazwisko</span>
@@ -282,10 +319,12 @@
                             <label>
                                 <span>Napisz w jakiej sprawie piszesz</span>
                                 <textarea class="wiadomosc" name="wiadomosc" id="tresc"></textarea>
-                                <input type="button" class="button" value="Wyślj" />
+                                <input type="submit" class="button" name="bt" value="Wyślj" />
                             </label>
                         </div>
                     </form>
+
+
                 </div>
             </div>
         </section>
@@ -311,6 +350,8 @@
     </main> <span class="scrollTopButton"><a href="index.html#nav"></a></span>
     <footer>
         <div class="foot">&copy; made with &hearts; by MichalinaKa </div>
+
+
 
 </body>
 

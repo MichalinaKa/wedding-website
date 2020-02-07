@@ -26,6 +26,11 @@ font-family: 'Poiret One', cursive;
   src: url("css/tomatoes-font/Tomatoes-O8L8.ttf");
 }
 
+@font-face {
+  font-family: "Main";
+  src: url("css/PoiretOne-Regular.ttf")
+}
+
 /* główne ustawienia, szerokość strony, flexbox itp */
 .container,
 .container--nav,
@@ -57,6 +62,7 @@ h2,
 p {
   font-weight: 100;
   font-family: "Poiret One", cursive;
+  font-family: "Main";
 }
 
 /* tytuł strony i menu */
@@ -199,6 +205,85 @@ a:hover {
   padding: 20px 0;
 }
 
+/* timer  */
+
+/* sekcja licznik */
+
+#counter {
+  /* margin: 50px 0; */
+  /* height: 40vh; */
+  /* background-image: url("img/wave.jpg"); */
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#counter h1 {
+  margin-top: 100px;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.container__counter {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  margin-top: 50px;
+  margin-bottom: 100px;
+  height: fit-content;
+}
+
+.container__counter--nr {
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  font-family: "Poiret One", cursive;
+  display: inline-block;
+  line-height: 1;
+  padding: 20px;
+  min-width: 180px;
+  text-align: center;
+  /* height: 100%; */
+
+}
+
+span {
+  display: block;
+  font-size: 30px;
+  color: black;
+  width: 100px;
+  margin: 0 auto
+}
+
+#days {
+  font-size: 100px;
+  color: #061a4e;
+}
+
+#hours {
+  font-size: 100px;
+  color: #b35106;
+}
+
+#minutes {
+  font-size: 100px;
+  color: #f6da74;
+}
+
+#seconds {
+  font-size: 80px;
+  color: #1b2405;
+}
+
+
+
+
+
+
+
+
 /* sekcja hero */
 
 #hero {
@@ -228,17 +313,6 @@ a:hover {
   width: 100%;
 }
 
-/* sekcja licznik */
-
-#counter {
-  margin: 50px 0;
-  height: 40vh;
-  background-image: url("img/wave.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: rgba(177, 163, 155, 0.7);
-}
 
 /* sekcja przewodnik */
 .container--guide {
@@ -387,6 +461,7 @@ a:hover {
   padding: 100px;
   position: relative;
 }
+
 .contact__form--left--border {
   position: absolute;
   top: 60px;
