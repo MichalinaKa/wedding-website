@@ -13,6 +13,10 @@ font-family: 'Poiret One', cursive;
   scroll-behavior: smooth;
 }
 
+::selection {
+  background-color: rgb(229, 229, 157);
+}
+
 /* zmienne kolory */
 :root {
   --lightyellow: rgba(247, 225, 100, 0.7);
@@ -28,7 +32,7 @@ font-family: 'Poiret One', cursive;
 
 @font-face {
   font-family: "Main";
-  src: url("css/PoiretOne-Regular.ttf")
+  src: url("css/PoiretOne-Regular.ttf");
 }
 
 /* główne ustawienia, szerokość strony, flexbox itp */
@@ -38,6 +42,17 @@ section {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
+  min-width: 1240px;
+}
+
+/* paddding służący do poprawnego wyświetlania sekcji kiedy naciskam menu  */
+#hello,
+#about,
+#guide,
+#contact,
+#gallery,
+#ceremony {
+  padding-top: 30px;
 }
 
 .container,
@@ -71,9 +86,8 @@ p {
   right: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.9);
-  z-index: 100
-    /* transform: rotate(270deg); */
-
+  z-index: 100;
+  /* transform: rotate(270deg); */
 }
 
 .container--nav {
@@ -143,10 +157,6 @@ a:hover {
   font-weight: 600;
 }
 
-
-
-
-
 /* wspólne ustawienia numeracji i zdjęć głównych sekcji */
 .container--nr,
 .container--img {
@@ -202,24 +212,25 @@ a:hover {
 
 .hello--right {
   background-color: rgba(243, 235, 231, 0.7);
-  width: 800px;
+  width: 65%;
   position: absolute;
-  left: -220px;
-  top: 160px;
+  left: 380px;
+  top: 140px;
   text-align: center;
-  padding: 50px 50px 30px;
+  padding: 40px 40px 40px;
   font-weight: 500;
+  z-index: 10;
 }
 
 .hello--left {
-  margin-left: 200px;
-  margin-top: 50px
+  position: relative;
+  left: 50px;
 }
 
 .hello--left img {
-  margin-top: 20px;
-  width: 40%;
-  height: 90vh;
+  margin-top: 40px;
+  width: 35%;
+  height: 85vh;
   object-fit: cover;
 }
 
@@ -231,22 +242,30 @@ a:hover {
 .hello--right p {
   font-size: 1.4em;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
-/* timer  */
+#date {
+  position: absolute;
+  font-size: 30px;
+  top: 520px;
+  left: -95px;
+  width: 600px;
+  z-index: 12;
+}
+
+#date h1 {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 10px;
+  text-align: center;
+}
 
 /* sekcja licznik */
 
 #counter {
-  /* margin: 50px 0; */
-  /* height: 40vh; */
-  /* background-image: url("img/wave.jpg"); */
-  /* background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; */
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 #counter h1 {
@@ -260,10 +279,11 @@ a:hover {
 .container__counter {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-
+  width: 100%;
   margin-top: 50px;
   margin-bottom: 100px;
   height: fit-content;
+  text-align: center;
 }
 
 .container__counter--nr {
@@ -275,7 +295,6 @@ a:hover {
   min-width: 180px;
   text-align: center;
   /* height: 100%; */
-
 }
 
 span {
@@ -283,7 +302,7 @@ span {
   font-size: 30px;
   color: black;
   width: 100px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 #days {
@@ -306,41 +325,101 @@ span {
   color: #1b2405;
 }
 
-
-
-
-
-
-
-
 /* sekcja hero */
 
-#hero {
-  background-color: rgb(219, 236, 255);
-  background-image: url(img/quote.jpg);
+/* #hero {
+  background-image: url("img/Projekt\ bez\ tytułu.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
+} */
+
+/* o nas - opisy */
+
+.container--about {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 50px;
 }
 
-.hero {
-  justify-content: flex-end;
+.container--about--item {
+  width: 30%;
 }
 
-.hero p {
-  margin: 30px;
-  line-height: 1.5;
-  padding: 30px;
-  font-size: 15px;
-  text-align: end;
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.hero h3 {
-  font-size: 15px;
-  font-family: "Poiret One", cursive;
-  text-align: end;
-  padding-bottom: 20px;
-  margin-right: 30px;
+.container--about--item img {
   width: 100%;
 }
+
+.he--description p,
+.she--description p {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.she--description {
+  text-align: center;
+  padding-left: 50px;
+}
+
+.she--description :first-child::before {
+  content: "";
+  background-color: rgba(229, 229, 157, 0.5);
+  width: 300px;
+  height: 10px;
+  position: absolute;
+  top: 167px;
+  left: 94px;
+  z-index: -1;
+}
+
+.he--description {
+  text-align: center;
+  padding-right: 50px;
+}
+
+.he--description :first-child::before {
+  content: "";
+  background-color: rgba(196, 192, 247, 0.5);
+  width: 230px;
+  height: 10px;
+  position: absolute;
+  top: 165px;
+  right: 134px;
+  z-index: -1;
+}
+
+#she,
+#he {
+  position: absolute;
+  font-size: 40px;
+  /* background-color: blueviolet; */
+  text-transform: uppercase;
+}
+
+#she {
+  transform: rotate(270deg);
+  top: 240px;
+  left: -200px;
+}
+
+#he {
+  transform: rotate(90deg);
+  top: 240px;
+  right: -150px;
+}
+
+/* sekcja ceremonia */
+.container--ceremony {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
 
 
 /* sekcja przewodnik */
@@ -478,9 +557,13 @@ span {
   font-family: "Poiret One", cursive;
   width: 100%;
   font-size: 2em;
+  font-weight: 900;
   text-transform: uppercase;
   display: block;
-  color: rgb(0, 36, 0);
+  /* color: rgb(0, 36, 0); */
+  background: radial-gradient(#0d491c, #e0e6dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #contactForm .container {
