@@ -1,6 +1,7 @@
 /*font-family: 'Montserrat', sans-serif;
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Monoton', cursive;
+font-family: 'Pacifico', cursive;
 
 font-family: 'tomato';
 font-family: 'Poiret One', cursive;
@@ -105,6 +106,9 @@ p {
     width: 15px;
     height: 15px;
 }
+.main-img {
+    filter: saturate(0.7);
+}
 
 ul {
     margin: 0 auto;
@@ -118,8 +122,7 @@ li {
     padding: 10px;
     display: inline;
     font-family: "tomato";
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
 }
 
 a {
@@ -133,51 +136,58 @@ a:hover {
 }
 
 /* wspólne ustawienia numeracji i zdjęć głównych sekcji */
-.container--nr,
-.container--img {
-    width: 50%;
-    display: flex;
-    margin: 0 auto;
+.container--nr {
+    width: 100%;
     text-align: center;
-    height: 400px;
-}
-
-.container--nr h1 {
-    font-family: "Poiret One", cursive;
-    font-size: 5em;
-    font-weight: 100;
-    line-height: 2em;
-    margin: 100px 0;
-    width: 40%;
-    border-right: 1.5px solid black;
-}
-
-.container--nr h1::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--darkyellow);
-    display: block;
-    margin: 0 auto;
+    height: 300px;
+    background: url("img/fiori.gif") no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .container--nr h3 {
-    width: 40%;
-    margin: auto;
-    font-size: 20px;
-    line-height: 3em;
-    font-family: "Poiret One", cursive;
-    color: rgb(58, 57, 57);
-    font-family: "tomato";
-}
-
-.container--img img {
     width: 100%;
-    object-fit: cover;
-    margin-top: 50px;
+    font-size: 8em;
+    font-family: "tomato";
+    height: 100%;
+    
+
+    
+/* border-bottom: 1px solid black; */
+/* margin-top: 10px;
+margin-left: -20px; */
+
 }
 
+/* 
+#about h1 {
+    color: rgb(230, 231, 140)
+} */
+
+#imginside {
+
+  
+}
+
+
+#guide h1, #guide h3 {
+    color: rgb(125, 197, 153)
+}
+
+#gallery h1, #gallery h3 {
+    color: rgb(125, 133, 197)
+}
+
+#contact h1, #contact h3 {
+    color: rgb(192, 197, 125)
+}
+/* .container--img {
+    clip-path: circle(50%);
+    width: 300px;
+height: 300px;
+} */
 /* sekcja hello - przywitanie gości */
 .hello {
     display: flex;
@@ -186,26 +196,28 @@ a:hover {
 }
 
 .hello--right {
-    background-color: rgba(243, 235, 231, 0.7);
-    width: 65%;
+    background-color: rgba(255, 255, 255, 1);
+    width: 55%;
     position: absolute;
     left: 380px;
-    top: 140px;
+    top: 180px;
     text-align: center;
-    padding: 40px 40px 40px;
+    padding: 40px 100px 40px;
     font-weight: 500;
     z-index: 10;
 }
 
 .hello--left {
     position: relative;
-    left: 50px;
+    /* left: 50px; */
+        margin: 0 auto;
+
 }
 
 .hello--left img {
-    margin-top: 40px;
-    width: 35%;
-    height: 85vh;
+    margin-top: 100px;
+    width: 100%;
+    height: 70vh;
     object-fit: cover;
 }
 
@@ -215,7 +227,7 @@ a:hover {
 }
 
 .hello--right p {
-    font-size: 1.4em;
+    font-size: 1.3em;
     text-align: center;
     padding: 10px 0;
 }
@@ -223,10 +235,11 @@ a:hover {
 #date {
     position: absolute;
     font-size: 30px;
-    top: 520px;
-    left: -95px;
+    top: 320px;
+    left: -170px;
     width: 600px;
     z-index: 12;
+    transform: rotate(270deg);
 }
 
 #date h1 {
@@ -238,6 +251,7 @@ a:hover {
 /* sekcja licznik */
 
 #counter {
+    color: rgba(136, 64, 102, 0.9);
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
@@ -249,6 +263,7 @@ a:hover {
     text-align: center;
     font-size: 50px;
     text-transform: uppercase;
+    
 }
 
 .container__counter {
@@ -256,49 +271,46 @@ a:hover {
     border-bottom: 1px solid black;
     width: 100%;
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     height: fit-content;
     text-align: center;
 }
 
 .container__counter--nr {
-    /* background-color: rgba(255, 255, 255, 0.2); */
     font-family: "Poiret One", cursive;
     display: inline-block;
     line-height: 1;
     padding: 20px;
     min-width: 180px;
     text-align: center;
-
-    /* height: 100%; */
 }
 
 span {
     display: block;
-    font-size: 30px;
+    font-size: 25px;
     color: black;
     width: 100px;
     margin: 0 auto;
 }
 
 #days {
-    font-size: 100px;
-    color: #061a4e;
+    font-size: 80px;
+    color: #82338a;
 }
 
 #hours {
-    font-size: 100px;
-    color: #b35106;
+    font-size: 80px;
+    color: #e2b1a4;
 }
 
 #minutes {
-    font-size: 100px;
+    font-size: 80px;
     color: #f6da74;
 }
 
 #seconds {
-    font-size: 80px;
-    color: #1b2405;
+    font-size: 60px;
+    color: #de9bec;
 }
 
 /* sekcja hero */
@@ -318,7 +330,7 @@ span {
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
-    padding: 100px 50px;
+    padding: 0 50px;
 }
 
 .container--about--item {
@@ -343,11 +355,11 @@ span {
 
 .she--description :first-child::before {
     content: "";
-    background-color: rgba(229, 229, 157, 0.5);
+    background-color: rgba(245, 194, 202, 0.5);
     width: 300px;
     height: 10px;
     position: absolute;
-    top: 167px;
+    top: 64px;
     left: 94px;
     z-index: -1;
 }
@@ -359,11 +371,11 @@ span {
 
 .he--description :first-child::before {
     content: "";
-    background-color: rgba(196, 192, 247, 0.5);
+    background-color: rgba(140, 119, 175, 0.5);
     width: 230px;
     height: 10px;
     position: absolute;
-    top: 165px;
+    top: 64px;
     right: 134px;
     z-index: -1;
 }
@@ -379,13 +391,13 @@ span {
 
 #she {
     transform: rotate(270deg);
-    top: 240px;
+    top: 130px;
     left: -200px;
 }
 
 #he {
     transform: rotate(90deg);
-    top: 240px;
+    top: 130px;
     right: -150px;
 }
 
@@ -398,38 +410,121 @@ span {
 }
 
 .container--ceremony {
-    height: 600px;
+    height: 400px;
     text-align: center;
-    background-color: pink;
+
+    /* background-color: pink; */
 }
 
+ .container--ceremony--content{
+     padding: 20px;
+     display: flex;
+     justify-content: space-between;
+ }
+.ceremony--place--box h2,
+.ceremony--time--box h2,
+.ceremony--date--box h2 {
+    font-size: 50px;
+}
 .container--ceremony h2 {
     font-size: 40px;
-    padding: 30px;
+    padding: 20px; 
 }
 
-.ceremony--place--box,
-.ceremony--time--box,
-.ceremony--date--box {
-    width: 100%;
+.container--ceremony--intro p{
+     font-size: 25px;
+     padding: 0 50px 70px;
+     text-align: center;
+}
+.ceremony--time--box {
+    display: flex;
+    flex-basis: 30%;
+}
+
+.rotated  {
+    transform: rotate(270deg);
+    height: 50px;
+    
+}
+
+.rotated::before {
+    content: "";
+    background-color: rgba(235, 149, 146, 0.5);
+    width: 80px;
+    height: 12px;
+    position: absolute;
+    top: 16px;
+    left: -10px;
+    z-index: -1;
 }
 
 .ceremony--place--box {
-    border-right: 1px solid black;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 35%;
+}
+.where--inside--box{
+    text-align: center;
+    padding-left: 30px;
+    border-left: 1px solid black
+}
+.where--inside--box h2{
+     width: 100%;
 }
 
-.ceremony--time--box {}
-
+.where--inside--box p{
+    font-size: 20px;
+    padding: 10px;
+}
 .ceremony--date--box {
-    border-right: 1px solid black;
-}
+    /* background-color:rgba(255,255,255, 0.5); */
+    flex-basis: 65%;
 
+}
+.ceremony--date--box h2{
+    padding-top: 50px;
+    font-size: 80px;
+    color: rgb(131, 50, 20)
+}
+.ceremony--date--box h3{ 
+    font-family:"Poiret One", cursive; 
+    font-size: 30px;
+    padding: 30px;
+}
 .ceremony--img--box {
     position: absolute;
+
+}
+.bcg--ceremony {
+    background-image: url("img/oneflower.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: opacity(0.7);    
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    z-index: -10;
+    background-position-y: 30px;
+    background-position-x: 280px;
+    transform: rotate(30deg);
 }
 
 .ceremony--img--box img {
     width: 200px;
+}#map {
+    filter: hue-rotate(30deg);
+     filter: grayscale(0.8);
+    margin-top: 180px;
+    width: 100vw;
+    height: 300px;
+
+}
+
+iframe {
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* sekcja przewodnik */
@@ -510,7 +605,7 @@ span {
 #contact2 {
     width: 100vw;
     margin-top: 50px;
-    background-image: url("img/img_contact/palm2.jpg");
+    background-image: url("img/fiori5.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -556,7 +651,6 @@ span {
     padding: 2px;
     width: 60%;
     text-align: center;
-    background-color: rgba(248, 247, 240, 0.6);
 }
 
 .contact--nr img {
@@ -566,14 +660,15 @@ span {
 
 .contact--nr h2 {
     font-family: "Poiret One", cursive;
+
     width: 100%;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 900;
     text-transform: uppercase;
     display: block;
-
-    /* color: rgb(0, 36, 0); */
-    background: radial-gradient(#0d491c, #e0e6dc);
+    text-align: end;
+    color: rgb(0, 36, 0);
+    background: radial-gradient(#91159c, #e0e6dc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -582,7 +677,7 @@ span {
     text-align: center;
     display: flex;
     justify-content: space-between;
-    padding: 100px;
+    padding: 0 100px 100px;
     position: relative;
 }
 
@@ -592,13 +687,13 @@ span {
     left: 60px;
     width: 300px;
     height: 450px;
-    background-image: url("img/palm.jpg");
+    background-image: url("img/flower4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .contact__form--left {
-    background-color: rgba(243, 235, 231, 0.95);
+    background-color: rgba(219, 203, 213, 0.9);
     padding: 50px;
     width: 35%;
     z-index: 1;

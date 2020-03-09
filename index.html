@@ -18,9 +18,6 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="stylesheet" href="css/form.css" type="text/css" />
     <title>Michalina & Marco 1.08.2020</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/emailform.js"></script>
 
 
 </head>
@@ -49,13 +46,12 @@
 
     <main>
         <section id="hello">
-
             <div class="container hello">
                 <div class="container--hello hello--left">
                     <div id="date">
                         <h1>1 sierpnia 2020</h1>
                     </div>
-                    <img src="img/seaplant.jpg">
+                    <img class="main-img" src="img/flower4.jpg">
                 </div>
                 <div class="container--hello hello--right">
                     <h2>Szanowni Goście</h2>
@@ -66,8 +62,11 @@
                         na plaży, a tymczasem zapraszamy do lektury ;)
                     </p>
                     &hearts;
+
                     <p>Michalina & Marco</p>
+
                 </div>
+
             </div>
 
         </section>
@@ -103,13 +102,9 @@
         </section> -->
         <section id="about">
             <div class="container--nr">
-                <h1>01</h1>
-                <h3>o nas</h3>
+                <!-- <h1>01.</h1> -->
+                <h3 id="imginside">o nas</h3>
             </div>
-            <div class="container--img">
-                <img src="img/img_contact/gdansk.jpg" alt="our photo, love, couple">
-            </div>
-
         </section>
         <section id="about__we">
             <div class="container--about container">
@@ -119,7 +114,7 @@
                 <div class="container--about--item she--description">
                     <p> psycholożka - programistka - joginka</p>&hearts;
                     <p> uwielbia pić herbatę i palić kadzidła</p>&hearts;
-                    <p> lubi tworzyć np. malując po nocach ilustracje, szyjć pachnące poduszki na oczy oraz wymyślać
+                    <p> lubi tworzyć np. malując po nocach ilustracje, szyć pachnące poduszki na oczy oraz wymyślać
                         kolejne projekty</p>&hearts;
                     <p> aktualne marzenie: dom na Sardynii, taki z widokiem na morze ~ ~</p>&hearts;
 
@@ -141,42 +136,53 @@
 
         </section>
         <section id="ceremony">
-            <div class="container--img">
-                <img src="img/place.jpg"></div>
             <div class="container--nr">
-                <h1>02</h1>
-                <h3>ceremonia</h3>
+                <h3 id="imginside">ceremonia</h3>
             </div>
         </section>
 
         <section id="ceremony--info">
-            <!-- <div class="container container--ceremony">
-              
-
-                <div class="ceremony--place--box">
-                    <h1>gdzie?</h1>
-                    <h2>Villa Tamerici </h2>
-                </div>
-                <div class="ceremony--date--box">
-                    <h1>kiedy?</h1>
-                    <h2>1 sierpnia 2020 roku</h2>
-                </div>
-                <div class=ceremony--time--box>
-                    <h1>o której?</h1>
-                    <h2>18:00</h2>
-                </div>
-                <div class="ceremony--img--box"><img src="img/hand.jpg"></div>
-            </div> -->
+            <div class="container container--ceremony">
+                <div class="container--ceremony--intro">
+                    <p>Szanowni Goście,<br><br>
+                        Ceremonia zaślubin, jak i jej świętowanie odbędzie się w domu nad morzem, z którego ogrodek
+                        prowadzi do morza. <br>
+                        Przypominamy o letnich strojach i wygodnych butach, które pozwolą na szalone tańce na plaży
+                        ;)<br>
 
 
+                    </p>
+                </div>
+                <div class="bcg--ceremony">
+                </div>
+                <div class="container--ceremony--content">
+                    <div class="when ceremony--date--box">
+                        <h2>1 sierpnia 2020</h2>
+                        <!-- <h3>18:00</h3> -->
+                    </div>
+
+                    <div class="where ceremony--place--box">
+                        <h1 class="rotated">gdzie?</h1>
+                        <div class="where--inside--box">
+                            <h2>Villa Tamerici</h2>
+                            <p>Via Torre Foro - Contrada Postilli
+                                66026 Ortona(CH)</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2946.2342281523565!2d14.32442791545756!3d42.401457079184134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133107b1604696dd%3A0xa575a5dfac2637d!2sVilla%20Tamerici%20Dimore%20sul%20Mare!5e0!3m2!1spl!2sit!4v1583703605599!5m2!1spl!2sit"
+                frameborder="0" style="border:0;"></iframe>
         </section>
         <section id="guide">
             <div class="container--nr">
-                <h1>03</h1>
-                <h3>przewodnik</h3>
+                <h3 id="imginside">przewodnik</h3>
             </div>
-            <div class="container--img">
-                <img src="img/moto.jpg"></div>
+
             <!-- <section>
 
                 <div class="container--guide">
@@ -199,11 +205,8 @@
         </section>
 
         <section id="gallery">
-            <div class="container--img">
-                <img src="img/bride-and-groom.jpg"></div>
             <div class="container--nr">
-                <h1>04</h1>
-                <h3>galeria</h3>
+                <h3 id="imginside">galeria</h3>
             </div>
 
         </section>
@@ -285,11 +288,8 @@
         </section> -->
         <section id="contact">
             <div class="container--nr">
-                <h1>05</h1>
-                <h3>kontakt</h3>
+                <h3 id="imginside">kontakt</h3>
             </div>
-            <div class="container--img">
-                <img src="img/contact.jpg"></div>
 
 
         </section>
@@ -341,7 +341,7 @@
                     <h1 class="vertical">bądźmy w kontakcie</h1>
                 </div>
                 <div class="contact__box--nr">
-                    <div class="contact--nr michalina">
+                    <!-- <div class="contact--nr michalina">
                         <h2>Michalina</h2>
                         <h2>+48 509 353 795</h2>
 
@@ -350,14 +350,16 @@
                     <div class="contact--nr marco">
                         <h2>Marco</h2>
                         <h2>+39 393 7456816 </h2>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
     </main> <span class="scrollTopButton"><a href="index.html#nav"></a></span>
     <footer>
         <div class="foot"> made with &hearts; by MichalinaKa &copy;</div>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/emailform.js"></script>
 
 
 </body>
