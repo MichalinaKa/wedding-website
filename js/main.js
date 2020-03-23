@@ -16,8 +16,6 @@ $(function () {
 
 
 function makeTimer() {
-
-    //		var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");	
     var endTime = new Date("29 August 2020 18:00:00 GMT+01:00");
     endTime = (Date.parse(endTime) / 1000);
 
@@ -41,5 +39,13 @@ function makeTimer() {
     $("#seconds").html(seconds + "<span>sekund</span>");
 
 }
-
 setInterval(function () { makeTimer(); }, 1000);
+
+// function changeColor() {
+//     style.backgroundColor = "red"
+// }
+// document.getElementById('polish').addEventListener('mouseOn', changeColor())
+
+
+
+
