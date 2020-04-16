@@ -91,9 +91,7 @@ header {
   text-transform: uppercase;
   color: white;
 }
-/* #lang a {
-  font-size: 25px;
-} */
+
 
 /* nagłówki style  */
 h1,
@@ -111,8 +109,6 @@ p {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 9;
-
-  /* transform: rotate(270deg); */
 }
 
 .container--nav {
@@ -130,9 +126,6 @@ p {
   width: 15px;
   height: 15px;
 }
-/* .main-img {
-  filter: saturate(0.7);
-} */
 
 ul {
   margin: 0 auto;
@@ -176,22 +169,8 @@ a:hover {
   font-size: 8em;
   font-family: "tomato";
   height: 100%;
-
-  /* border-bottom: 1px solid black; */
-  /* margin-top: 10px;
-margin-left: -20px; */
 }
 
-/* 
-#about h1 {
-    color: rgb(230, 231, 140)
-} */
-
-/* .container--img {
-    clip-path: circle(50%);
-    width: 300px;
-height: 300px;
-} */
 /* sekcja hello - przywitanie gości */
 .hello {
   margin: 0 auto;
@@ -253,7 +232,6 @@ height: 300px;
 }
 
 /* sekcja licznik */
-
 #counter {
   color: rgba(136, 64, 102, 0.9);
   display: flex;
@@ -316,17 +294,7 @@ span {
   color: #de9bec;
 }
 
-/* sekcja hero */
-
-/* #hero {
-  background-image: url("img/Projekt\ bez\ tytułu.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 100vh;
-} */
-
 /* o nas - opisy */
-
 .container--about {
   display: flex;
   position: relative;
@@ -409,6 +377,7 @@ span {
   top: 130px;
   right: -150px;
 }
+
 /* o nas druga część sekcji */
 .container--about--2 {
   display: flex;
@@ -419,14 +388,12 @@ span {
 }
 
 .container--about--2--left {
-  /* margin-left: 40px; */
   flex-basis: 30%;
   position: relative;
 }
 .container--about--2--img {
   width: 100%;
   border: 20px solid rgba(243, 225, 225, 1);
-  /* border-radius: 50%; */
 }
 .container--about--2--img img {
   width: 100%;
@@ -471,36 +438,17 @@ span {
 .september {
   grid-area: september;
 }
-/* .september h2 {
-  border: 1px solid rgb(146, 146, 231);
-} */
 
 .october {
   grid-area: october;
 }
-/* .october h2 {
-  border: 1px solid var(--darkyellow);
-} */
-
 .march {
   grid-area: march;
 }
 
-/* .march h2 {
-  border: 1px solid rgb(238, 146, 130);
-} */
 .august {
   grid-area: august;
 }
-/* .august h2 {
-  border-bottom: 1.5px solid black;
-} */
-/* .september h2,
-.october h2,
-.march h2,
-.august h2 {
-  border: 2px dashed black;
-} */
 
 .road1,
 .road2,
@@ -533,7 +481,6 @@ span {
 
 .item-about--2 h2 {
   padding: 10px;
-  /* border: 1px solid var(--darkyellow); */
   margin-bottom: 20px;
 }
 /* sekcja ceremonia */
@@ -614,7 +561,6 @@ span {
   padding: 10px;
 }
 .ceremony--date--box {
-  /* background-color:rgba(255,255,255, 0.5); */
   flex-basis: 65%;
   color: rgb(131, 50, 20);
 }
@@ -717,23 +663,6 @@ iframe {
 iframe {
   margin: 50px;
 }
-/* .guide__content__wrapper::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 800px;
-  top: 150px;
-  background-color: black;
-  left: 30px;
-} */
-/* .guide__content__wrapper::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 800px;
-  background-color: black;
-  right: 30px;
-} */
 
 .guide__content__wrapper div {
   padding-top: 50px;
@@ -775,14 +704,6 @@ iframe {
   font-size: 21px;
 }
 
-/* 
-.container--guide img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  margin-top: 50px;
-  opacity: 0.6;
-} */
 
 /* sekcja galeria */
 #gallery--info {
@@ -797,49 +718,6 @@ iframe {
   padding: 50px;
 }
 
-/* galeria grid */
-
-.container__grid img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.container__grid {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  grid-template-rows: auto auto auto auto auto;
-  gap: 20px;
-}
-
-.grid--item {
-  position: relative;
-}
-
-.grid--item-1 {
-  grid-column: 1 / 4;
-  grid-row: 1 / 4;
-}
-
-.grid--item-6 {
-  grid-column: 4 / 6;
-  grid-row: 3 / 5;
-}
-
-.grid--item-7 {
-  grid-column: 1 / 3;
-  grid-row: 4 / 6;
-}
-
-.grid--item-10 {
-  grid-column: 4/6;
-  grid-row: 5/6;
-}
 
 /* sekcja kontact */
 #contact2 {
@@ -852,16 +730,6 @@ iframe {
 }
 
 .contact__box {
-  /* background-image: url(svg/Lineflower.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 20%; */
-  /* filter: drop-shadow(10px 10px rgba(0, 0, 0, 0.3)); */
-  /* background-image: url("img/img_contact/palm2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; */
-  /* margin: 0 auto; */
   height: 70vh;
   width: 100%;
   display: flex;
@@ -907,7 +775,7 @@ iframe {
   filter: saturate(0.5);
   border: px solid rgb(241, 241, 147);
   border-radius: 50%;
-  padding: 15px; /* filter: blur(1px); */
+  padding: 15px; 
 }
 
 .contact--nr h2 {
