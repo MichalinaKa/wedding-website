@@ -6,7 +6,7 @@ font-family: 'Poiret One', cursive;
 */
 
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -20,6 +20,8 @@ font-family: 'Poiret One', cursive;
 :root {
   --lightyellow: rgba(247, 225, 100, 0.7);
   --darkyellow: rgba(228, 204, 70, 1);
+  --coral: rgb(201, 74, 65);
+  --darkcoral: rgba(131, 50, 20, 1);
   --fontdark: rgba(0, 0, 0, 1);
   --fontlight: rgba(252, 252, 252, 1);
 }
@@ -91,7 +93,6 @@ header {
   text-transform: uppercase;
   color: white;
 }
-
 
 /* nagłówki style  */
 h1,
@@ -172,18 +173,30 @@ a:hover {
 }
 
 /* sekcja hello - przywitanie gości */
+#hello {
+  height: 100vh;
+  width: 100vw;
+}
+
 .hello {
   margin: 0 auto;
   display: flex;
+  width: 100%;
   flex-wrap: nowrap;
   position: relative;
 }
 
 .hello--right {
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 60%;
+  background-color: rgba(247, 105, 105, 0.8);
+  -webkit-box-shadow: 16px -19px 5px 0px rgba(255, 212, 196, 0.32);
+  -moz-box-shadow: 16px -19px 5px 0px rgba(255, 212, 196, 0.32);
+  box-shadow: 16px -19px 5px 0px rgba(255, 212, 196, 0.32);
+  width: 400px;
+  max-height: 700px;
+  /* border-radius: 50%; */
+  color: white;
   position: absolute;
-  left: 380px;
+  left: 580px;
   top: 160px;
   text-align: center;
   padding: 40px 100px 40px;
@@ -194,6 +207,7 @@ a:hover {
 .hello--left {
   position: relative;
   /* left: 50px; */
+
   margin: 0 auto;
 }
 
@@ -210,7 +224,7 @@ a:hover {
 }
 
 .hello--right p {
-  font-size: 1.4em;
+  font-size: 1.2em;
   text-align: center;
   padding: 10px 0;
 }
@@ -219,10 +233,11 @@ a:hover {
   position: absolute;
   font-size: 30px;
   top: 320px;
-  left: -170px;
-  width: 600px;
+  left: -450px;
+  width: 100%;
   z-index: 12;
   transform: rotate(270deg);
+  color: rgba(247, 105, 105, 1);
 }
 
 #date h1 {
@@ -326,7 +341,7 @@ span {
 .she--description {
   flex-basis: 35%;
   text-align: center;
-  padding-left: 50px;
+  padding-right: 80px;
 }
 
 .she--description :first-child::before {
@@ -335,7 +350,7 @@ span {
   width: 300px;
   height: 10px;
   position: absolute;
-  top: 35px;
+  top: 38px;
   left: 123px;
   z-index: -1;
 }
@@ -343,7 +358,7 @@ span {
 .he--description {
   flex-basis: 35%;
   text-align: center;
-  padding-right: 50px;
+  padding-left: 80px;
 }
 
 .he--description :first-child::before {
@@ -381,108 +396,54 @@ span {
 /* o nas druga część sekcji */
 .container--about--2 {
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
+  justify-content: space-around;
+  align-items: center;
   margin: 150px auto;
   text-align: center;
 }
 
 .container--about--2--left {
-  flex-basis: 30%;
+  flex-basis: 70%;
+  margin: 0 auto;
   position: relative;
 }
 .container--about--2--img {
   width: 100%;
-  border: 20px solid rgba(243, 225, 225, 1);
+  /* border: 20px solid rgba(258, 242, 244, 0.6); */
 }
 .container--about--2--img img {
   width: 100%;
 }
 
-#svgAbout {
-  position: absolute;
-  top: -140px;
-  left: 100px;
-  width: 600px;
-  height: 600px;
-}
-.container--about--2--header {
-  position: absolute;
-  top: 332px;
-  left: 0px;
-  font-size: 40px;
-  color: rgb(44, 42, 42);
-  width: 100%;
-  padding-bottom: 30px;
-  text-align: center;
-  padding-top: 30px;
-  background-color: rgba(243, 225, 225, 1);
-  z-index: 2;
-}
 .container--about--2--right {
   position: relative;
-  padding-left: 40px;
-  flex-basis: 50%;
-  display: grid;
-  height: 80vh;
-  grid-template-columns: 2fr 1fr 2fr 2fr 1fr;
-  grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "september september . . ."
-    ". . october october . "
-    "march march . . ."
-    ". . .august august "
-    ". . . august august";
-  grid-gap: 15px;
+  /* padding-left: 40px; */
+  flex-basis: 90%;
+  border-left: 1px solid black;
+  text-align: left;
+  margin-left: 100px;
 }
-.september {
-  grid-area: september;
+.item-about--2 {
+  padding: 20px;
+  width: 80%;
 }
-
-.october {
-  grid-area: october;
-}
-.march {
-  grid-area: march;
-}
-
-.august {
-  grid-area: august;
-}
-
-.road1,
-.road2,
-.road3 {
-  position: absolute;
-}
-.road1 img,
-.road2 img,
-.road3 img {
-  filter: blur(1px);
-  display: block;
-  width: 100%;
-}
-
-.road1 {
-  right: 170px;
-  bottom: 350px;
-  width: 260px;
-}
-.road2 {
-  top: 370px;
-  right: 290px;
-  width: 150px;
-}
-.road3 {
-  top: 550px;
-  right: 290px;
-  width: 250px;
-}
-
 .item-about--2 h2 {
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 0 0 20px 20px;
+  color: var(--coral);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
+.item-about--2 h2::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  background-color: var(--coral);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
 /* sekcja ceremonia */
 .container--ceremony {
   width: 100%;
@@ -562,12 +523,12 @@ span {
 }
 .ceremony--date--box {
   flex-basis: 65%;
-  color: rgb(131, 50, 20);
+  color: var(--coral);
 }
 .ceremony--date--box h2 {
   padding-top: 50px;
   font-size: 80px;
-  color: rgb(131, 50, 20);
+  color: var(--darkcoral);
 }
 .ceremony--date--box h3 {
   font-family: "Poiret One", cursive;
@@ -623,22 +584,24 @@ iframe {
   margin: 0 auto;
 }
 .guide__wrapper {
-  flex-basis: 100%;
+  flex-basis: 80%;
   margin: 50px auto 0;
   text-align: start;
   border: 1px solid black;
+  letter-spacing: 1px;
 }
 
 .guide__wrapper h1 {
-  color: coral;
-  font-size: 70px;
+  color: var(--coral);
+  font-size: 50px;
   text-align: start;
-  padding: 30px;
+  padding: 30px 50px 10px 40px;
   width: 100%;
 }
 .guide__wrapper h2 {
-  padding: 30px;
+  padding: 0 30px 30px 30px;
   text-align: end;
+  font-size: 18px;
 }
 .guide__content__wrapper {
   flex-basis: 90%;
@@ -651,13 +614,9 @@ iframe {
   margin: 0 auto;
   counter-reset: my-awesome-counter;
 }
-.felicita div {
+.felicita {
   flex-basis: 100%;
   padding: 50px;
-}
-.felicita p {
-  font-size: 23px;
-  line-height: 130%;
 }
 
 iframe {
@@ -684,6 +643,7 @@ iframe {
   position: relative;
   margin-top: 50px;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .guide__content__wrapper h3::before {
@@ -701,13 +661,13 @@ iframe {
 
 .guide__content__wrapper p {
   padding-top: 12px;
-  font-size: 21px;
+  font-size: 17px;
+  letter-spacing: 1px;
 }
-
 
 /* sekcja galeria */
 #gallery--info {
-  background-color: rgba(252, 191, 202, 0.6);
+  background-color: rgba(258, 242, 244, 0.6);
   margin-top: 20px;
 }
 
@@ -717,7 +677,6 @@ iframe {
   text-align: center;
   padding: 50px;
 }
-
 
 /* sekcja kontact */
 #contact2 {
@@ -741,7 +700,7 @@ iframe {
   font-family: "Poiret One", cursive;
   width: 100%;
   display: block;
-  font-size: 2.5em;
+  font-size: 2.4em;
   padding: 20px;
 }
 
@@ -775,7 +734,7 @@ iframe {
   filter: saturate(0.5);
   border: px solid rgb(241, 241, 147);
   border-radius: 50%;
-  padding: 15px; 
+  padding: 15px;
 }
 
 .contact--nr h2 {
@@ -965,3 +924,6 @@ footer {
 
     }
 } */
+
+@media (max-width: 1240) {
+}
