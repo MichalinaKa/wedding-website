@@ -15,9 +15,11 @@
   padding: 40px 25px 0 25px;
   text-align: center;
   box-shadow: 0 0 0px 100vw rgba(0, 0, 0, 0.55), 0 0 13px 1px black;
-  font-size: calc(16px + (25 - 20) * ((100vw - 320px)/ (1920 - 320)));
+  font-size: calc(16px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
   z-index: 999;
 }
+
+
 
 @media (min-width: 768px) {
   .contact {
@@ -49,9 +51,9 @@
 }
 
 .emailForm label.half {
-   display: inline-block;
-   width: 49.4%;
- }
+  display: inline-block;
+  width: 49.4%;
+}
 
 @media (max-width: 1200px) {
   .emailForm label.half {
@@ -101,7 +103,7 @@
   position: absolute;
   margin: 0;
   display: block;
-  animation: .5s slideTop;
+  animation: 0.5s slideTop;
   z-index: -1;
   border-top: 0 !important;
   border-bottom-right-radius: 3px;
@@ -119,7 +121,7 @@
   }
 }
 
-.emailForm button[type=submit] {
+.emailForm button[type="submit"] {
   width: 40%;
   cursor: pointer;
   margin-top: 35px;
@@ -140,10 +142,10 @@
 }
 
 @media (max-width: 375px) {
-  .recaptcha-label{
-    margin-left: calc((100% - 306px)/2)!important;
-    transform:scale(0.9);
-    -webkit-transform:scale(0.9);
+  .recaptcha-label {
+    margin-left: calc((100% - 306px) / 2) !important;
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
     transform-origin: center center;
     -webkit-transform-origin: center center;
   }
@@ -208,7 +210,7 @@
 }
 
 .main-btn:hover,
-.main-btn:focus{
+.main-btn:focus {
   text-decoration: none;
   transform: translateY(-1px);
   color: #ffffff;
